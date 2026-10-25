@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediPulse - History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#5ed9d3",
+              "surface-bright": "#f7fafb",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#521b00",
+              "on-tertiary-fixed": "#360f00",
+              "surface-container-high": "#e5e9ea",
+              "on-secondary-container": "#406a67",
+              "surface-container-low": "#f1f4f5",
+              "primary-fixed": "#7df6ef",
+              "on-primary-fixed-variant": "#00504d",
+              "on-secondary": "#ffffff",
+              "primary-container": "#0ea5a0",
+              "surface-container": "#ebeeef",
+              "surface-variant": "#e0e3e4",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#974822",
+              "inverse-on-surface": "#eef1f2",
+              "on-background": "#181c1d",
+              "secondary-container": "#bce8e5",
+              "secondary-fixed-dim": "#a3cfcb",
+              "secondary-fixed": "#bfebe8",
+              "on-error": "#ffffff",
+              "on-primary-container": "#003331",
+              "on-tertiary-fixed-variant": "#78310c",
+              "on-error-container": "#93000a",
+              "background": "#f7fafb",
+              "primary": "#006a66",
+              "surface": "#f7fafb",
+              "on-primary": "#ffffff",
+              "on-surface": "#181c1d",
+              "on-surface-variant": "#3d4948",
+              "tertiary-fixed-dim": "#ffb597",
+              "outline": "#6d7a78",
+              "tertiary-fixed": "#ffdbcd",
+              "tertiary-container": "#d97b51",
+              "surface-tint": "#006a66",
+              "inverse-surface": "#2d3132",
+              "surface-dim": "#d7dadc",
+              "on-secondary-fixed": "#00201f",
+              "outline-variant": "#bcc9c8",
+              "surface-container-highest": "#e0e3e4",
+              "on-primary-fixed": "#00201f",
+              "on-secondary-fixed-variant": "#234d4b",
+              "secondary": "#3c6563",
+              "inverse-primary": "#5ed9d3"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #006a66 0%, #0ea5a0 100%);
+        }
+        .glass-overlay {
+            background: rgba(247, 250, 251, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="menu">menu</span>
+</button>
+<h1 class="text-headline-md font-semibold text-on-surface tracking-tight">MediPulse</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6">
+<!-- History Header & Stats -->
+<section class="py-6">
+<h2 class="text-headline-lg font-bold text-on-surface mb-2">History</h2>
+<div class="flex gap-4 mb-8 overflow-x-auto pb-2">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-label-sm font-semibold tracking-wider whitespace-nowrap">ALL</button>
+<button class="bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-full text-label-sm font-semibold tracking-wider whitespace-nowrap">TAKEN</button>
+<button class="bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-full text-label-sm font-semibold tracking-wider whitespace-nowrap">MISSED</button>
+</div>
+<!-- Visual Insight: Weekly Compliance -->
+<div class="bg-surface-container rounded-lg p-6 mb-8 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-label-sm font-bold text-on-surface-variant mb-1 uppercase tracking-widest">Compliance Rate</p>
+<h3 class="text-headline-lg font-bold text-primary mb-4">94%</h3>
+<div class="flex items-end gap-1.5 h-12">
+<div class="flex-1 bg-primary-container h-8 rounded-t-md opacity-40"></div>
+<div class="flex-1 bg-primary-container h-12 rounded-t-md opacity-60"></div>
+<div class="flex-1 bg-primary-container h-10 rounded-t-md opacity-40"></div>
+<div class="flex-1 bg-primary h-14 rounded-t-md"></div>
+<div class="flex-1 bg-primary-container h-9 rounded-t-md opacity-50"></div>
+<div class="flex-1 bg-primary-container h-11 rounded-t-md opacity-70"></div>
+<div class="flex-1 bg-primary h-16 rounded-t-md"></div>
+</div>
+</div>
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Timeline Section -->
+<div class="space-y-8">
+<!-- Today Group -->
+<div>
+<header class="sticky top-[68px] z-30 bg-surface py-2 mb-4">
+<span class="text-label-sm font-bold text-primary tracking-[0.2em] uppercase">Today, Oct 12</span>
+</header>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-4 flex items-center gap-4 transition-transform hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<div class="flex-1">
+<h4 class="text-title-md font-bold text-on-surface">Lisinopril</h4>
+<p class="text-body-md text-on-surface-variant">10mg • 08:00 AM</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-bold">
+                            Taken
+                        </div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-4 flex items-center gap-4 transition-transform hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="pill">pill</span>
+</div>
+<div class="flex-1">
+<h4 class="text-title-md font-bold text-on-surface">Vitamin D3</h4>
+<p class="text-body-md text-on-surface-variant">2000 IU • 09:30 AM</p>
+</div>
+<div class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-label-sm font-bold">
+                            Missed
+                        </div>
+</div>
+</div>
+</div>
+<!-- Yesterday Group -->
+<div>
+<header class="sticky top-[68px] z-30 bg-surface py-2 mb-4">
+<span class="text-label-sm font-bold text-on-surface-variant tracking-[0.2em] uppercase">Yesterday, Oct 11</span>
+</header>
+<div class="space-y-4">
+<!-- Item 3 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-4 flex items-center gap-4 opacity-80">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<div class="flex-1">
+<h4 class="text-title-md font-bold text-on-surface">Lisinopril</h4>
+<p class="text-body-md text-on-surface-variant">10mg • 08:00 AM</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-bold">
+                            Taken
+                        </div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-4 flex items-center gap-4 opacity-80">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="vaccines">vaccines</span>
+</div>
+<div class="flex-1">
+<h4 class="text-title-md font-bold text-on-surface">Metformin</h4>
+<p class="text-body-md text-on-surface-variant">500mg • 07:00 PM</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-bold">
+                            Taken
+                        </div>
+</div>
+</div>
+</div>
+<!-- Earlier Group -->
+<div>
+<header class="sticky top-[68px] z-30 bg-surface py-2 mb-4">
+<span class="text-label-sm font-bold text-on-surface-variant tracking-[0.2em] uppercase">Oct 10</span>
+</header>
+<div class="space-y-4">
+<div class="bg-surface-container-low rounded-DEFAULT p-4 flex items-center gap-4 opacity-80">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<div class="flex-1">
+<h4 class="text-title-md font-bold text-on-surface">Lisinopril</h4>
+<p class="text-body-md text-on-surface-variant">10mg • 08:00 AM</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm font-bold">
+                            Taken
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 w-14 h-14 signature-gradient text-on-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 z-50">
+<span class="material-symbols-outlined scale-125" data-icon="add">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 glass-overlay border-t border-outline-variant/10 px-6 py-3 flex justify-around items-center z-50">
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="home">home</span>
+<span class="text-label-sm text-on-surface-variant font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="medication">medication</span>
+<span class="text-label-sm text-on-surface-variant font-medium">Medications</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer">
+<div class="bg-secondary-container text-on-secondary-container px-5 py-1 rounded-full mb-0.5">
+<span class="material-symbols-outlined" data-icon="history" style="font-variation-settings: 'FILL' 1;">history</span>
+</div>
+<span class="text-label-sm text-on-surface font-bold">History</span>
+</div>
+</nav>
+</body></html>

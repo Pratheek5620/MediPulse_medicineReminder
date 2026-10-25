@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, height=844, initial-scale=1.0, user-scalable=no">
+  <title>My Medicines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            teal: {
+              brand: '#006A66',
+              surface: '#E6F4F2',
+              light: '#0EA5A0',
+              container: '#C8EDE8',
+            },
+            amber: {
+              alert: '#B45309',
+              alertBg: '#FEF3C7',
+              pill: '#D97706',
+              bar: '#F59E0B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #F8FBFC;
+      color: #111827;
+      margin: 0;
+      padding: 0;
+      width: 390px;
+      height: 844px;
+      overflow-x: hidden;
+    }
+    /* Hide scrollbars but keep smooth scrolling */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FBFC] flex flex-col justify-between h-[844px] w-[390px] relative select-none">
+
+  <!-- Main Scrollable Area -->
+  <main class="flex-1 overflow-y-auto px-5 pt-8 pb-28">
+
+    <!-- Header Section -->
+    <header class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="text-[30px] font-extrabold text-[#0D1F1D] tracking-tight leading-none">
+          My medicines
+        </h1>
+        <p class="text-[15px] font-medium text-[#4A5D5A] mt-1.5">
+          4 active prescriptions
+        </p>
+      </div>
+
+      <!-- Round Teal + Button (min 56dp touch target) -->
+      <button type="button" aria-label="Add medicine" class="w-14 h-14 rounded-full bg-[#006A66] hover:bg-[#00524F] active:scale-95 transition-all text-white flex items-center justify-center shadow-md shadow-[#006A66]/20 flex-shrink-0">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Amber Warning Refill Card (24px radius, no 1px dividers, high contrast) -->
+    <section class="bg-[#FEF3C7] rounded-[24px] p-5 mb-6 shadow-sm border-0">
+      <div class="flex items-start gap-3.5 mb-2.5">
+        <!-- Warning Triangle Vector (accessible high contrast amber) -->
+        <div class="w-8 h-8 rounded-full bg-[#FDE68A] flex items-center justify-center flex-shrink-0 mt-0.5 text-[#92400E]">
+          <svg class="w-5 h-5 text-[#92400E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-[19px] font-bold text-[#78350F] leading-snug">
+            Metformin runs out in 3 days
+          </h2>
+          <p class="text-[16px] font-semibold text-[#92400E] mt-1 leading-snug">
+            6 tablets left · last dose Tue 27 Oct, morning
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons (Height >= 56dp for seniors) -->
+      <div class="flex flex-col gap-3 mt-4">
+        <!-- Order refill filled pill button -->
+        <button type="button" class="w-full h-14 min-h-[56px] rounded-full bg-[#B45309] hover:bg-[#92400E] active:scale-98 transition-all text-white text-[17px] font-bold tracking-wide flex items-center justify-center gap-2 shadow-sm">
+          <svg class="w-5 h-5 text-amber-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Order refill
+        </button>
+
+        <!-- I bought more outlined pill button -->
+        <button type="button" class="w-full h-14 min-h-[56px] rounded-full bg-white/80 border-2 border-[#B45309] active:bg-[#FEF3C7] text-[#92400E] text-[17px] font-bold tracking-wide flex items-center justify-center gap-2 transition-all">
+          <svg class="w-5 h-5 text-[#92400E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          I bought more
+        </button>
+      </div>
+    </section>
+
+    <!-- Medicine Cards List -->
+    <div class="space-y-4">
+
+      <!-- Card 1: Metformin 500 mg -->
+      <article class="bg-white rounded-[24px] p-5 shadow-sm border-0">
+        <div class="flex justify-between items-start gap-2">
+          <div>
+            <h3 class="text-[20px] font-bold text-[#111827] tracking-tight">
+              Metformin <span class="text-[17px] font-semibold text-[#4B5563]">500 mg</span>
+            </h3>
+            <p class="text-[16px] font-semibold text-[#4B5563] mt-1">
+              After food · until 22 Nov
+            </p>
+          </div>
+          <!-- Indian Dosage notation badge -->
+          <div class="bg-[#FFFBEB] text-[#B45309] px-3.5 py-1.5 rounded-full font-extrabold text-[17px] tracking-wider flex-shrink-0 shadow-sm border border-[#FDE68A]">
+            1-0-1
+          </div>
+        </div>
+
+        <!-- Stock Bar & Count -->
+        <div class="mt-4 pt-1">
+          <div class="flex justify-between items-center text-[15px] font-bold mb-2">
+            <span class="text-[#B45309] flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#D97706] inline-block animate-pulse"></span>
+              Stock low
+            </span>
+            <span class="text-[#B45309] text-[16px]">6 left</span>
+          </div>
+          <!-- 10% Amber bar -->
+          <div class="w-full h-3 bg-[#FEF3C7] rounded-full overflow-hidden">
+            <div class="h-full bg-[#D97706] rounded-full" style="width: 10%;"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Telmisartan 40 mg -->
+      <article class="bg-white rounded-[24px] p-5 shadow-sm border-0">
+        <div class="flex justify-between items-start gap-2">
+          <div>
+            <h3 class="text-[20px] font-bold text-[#111827] tracking-tight">
+              Telmisartan <span class="text-[17px] font-semibold text-[#4B5563]">40 mg</span>
+            </h3>
+            <p class="text-[16px] font-semibold text-[#4B5563] mt-1">
+              After food · ongoing
+            </p>
+          </div>
+          <!-- Indian Dosage notation badge -->
+          <div class="bg-[#E6F4F2] text-[#006A66] px-3.5 py-1.5 rounded-full font-extrabold text-[17px] tracking-wider flex-shrink-0 shadow-sm border border-[#C8EDE8]">
+            1-0-0
+          </div>
+        </div>
+
+        <!-- Stock Bar & Count -->
+        <div class="mt-4 pt-1">
+          <div class="flex justify-between items-center text-[15px] font-bold mb-2">
+            <span class="text-[#006A66]">Stock healthy</span>
+            <span class="text-[#1F2937] text-[16px]">22 left</span>
+          </div>
+          <!-- 73% Teal bar -->
+          <div class="w-full h-3 bg-[#E2E8F0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#006A66] rounded-full" style="width: 73%;"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Pantoprazole 40 mg -->
+      <article class="bg-white rounded-[24px] p-5 shadow-sm border-0">
+        <div class="flex justify-between items-start gap-2">
+          <div>
+            <h3 class="text-[20px] font-bold text-[#111827] tracking-tight">
+              Pantoprazole <span class="text-[17px] font-semibold text-[#4B5563]">40 mg</span>
+            </h3>
+            <p class="text-[16px] font-semibold text-[#4B5563] mt-1">
+              Before breakfast · until 7 Nov
+            </p>
+          </div>
+          <!-- Indian Dosage notation badge -->
+          <div class="bg-[#E6F4F2] text-[#006A66] px-3.5 py-1.5 rounded-full font-extrabold text-[17px] tracking-wider flex-shrink-0 shadow-sm border border-[#C8EDE8]">
+            1-0-0
+          </div>
+        </div>
+
+        <!-- Stock Bar & Count -->
+        <div class="mt-4 pt-1">
+          <div class="flex justify-between items-center text-[15px] font-bold mb-2">
+            <span class="text-[#006A66]">Stock moderate</span>
+            <span class="text-[#1F2937] text-[16px]">14 left</span>
+          </div>
+          <!-- 47% Teal bar -->
+          <div class="w-full h-3 bg-[#E2E8F0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#0EA5A0] rounded-full" style="width: 47%;"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Atorvastatin 10 mg -->
+      <article class="bg-white rounded-[24px] p-5 shadow-sm border-0">
+        <div class="flex justify-between items-start gap-2">
+          <div>
+            <h3 class="text-[20px] font-bold text-[#111827] tracking-tight">
+              Atorvastatin <span class="text-[17px] font-semibold text-[#4B5563]">10 mg</span>
+            </h3>
+            <p class="text-[16px] font-semibold text-[#4B5563] mt-1">
+              At bedtime · ongoing
+            </p>
+          </div>
+          <!-- Indian Dosage notation badge -->
+          <div class="bg-[#E6F4F2] text-[#006A66] px-3.5 py-1.5 rounded-full font-extrabold text-[17px] tracking-wider flex-shrink-0 shadow-sm border border-[#C8EDE8]">
+            0-0-1
+          </div>
+        </div>
+
+        <!-- Stock Bar & Count -->
+        <div class="mt-4 pt-1">
+          <div class="flex justify-between items-center text-[15px] font-bold mb-2">
+            <span class="text-[#006A66]">Stock healthy</span>
+            <span class="text-[#1F2937] text-[16px]">25 left</span>
+          </div>
+          <!-- 83% Teal bar -->
+          <div class="w-full h-3 bg-[#E2E8F0] rounded-full overflow-hidden">
+            <div class="h-full bg-[#006A66] rounded-full" style="width: 83%;"></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation Bar (4 tabs: Today, History, Medicines, Share) -->
+  <!-- Fully rounded floating / docked shell with no 1px dividers -->
+  <nav class="fixed bottom-0 left-0 w-[390px] bg-white/95 backdrop-blur-md px-3 pt-2.5 pb-6 shadow-[0_-8px_30px_rgba(0,0,0,0.06)] z-50">
+    <div class="flex items-center justify-around">
+
+      <!-- Tab 1: Today -->
+      <button type="button" class="flex flex-col items-center justify-center flex-1 py-1 text-[#64748B] hover:text-[#006A66] transition-colors group">
+        <svg class="w-6 h-6 mb-1 text-[#64748B] group-hover:text-[#006A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span class="text-[13px] font-semibold tracking-normal">Today</span>
+      </button>
+
+      <!-- Tab 2: History -->
+      <button type="button" class="flex flex-col items-center justify-center flex-1 py-1 text-[#64748B] hover:text-[#006A66] transition-colors group">
+        <svg class="w-6 h-6 mb-1 text-[#64748B] group-hover:text-[#006A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span class="text-[13px] font-semibold tracking-normal">History</span>
+      </button>
+
+      <!-- Tab 3: Medicines (ACTIVE) -->
+      <button type="button" class="flex flex-col items-center justify-center flex-1 py-1 text-[#006A66] relative">
+        <div class="w-12 h-8 rounded-full bg-[#E6F4F2] flex items-center justify-center mb-0.5">
+          <svg class="w-5 h-5 text-[#006A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path>
+            <path d="m8.5 8.5 7 7"></path>
+          </svg>
+        </div>
+        <span class="text-[13px] font-bold tracking-tight text-[#006A66]">Medicines</span>
+      </button>
+
+      <!-- Tab 4: Share -->
+      <button type="button" class="flex flex-col items-center justify-center flex-1 py-1 text-[#64748B] hover:text-[#006A66] transition-colors group">
+        <svg class="w-6 h-6 mb-1 text-[#64748B] group-hover:text-[#006A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        <span class="text-[13px] font-semibold tracking-normal">Share</span>
+      </button>
+
+    </div>
+  </nav>
+
+</body>
+</html>

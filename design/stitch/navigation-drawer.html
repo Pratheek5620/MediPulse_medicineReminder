@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediPulse - Navigation Drawer</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#006a66",
+                        "surface-container-low": "#f1f4f5",
+                        "surface-container-highest": "#e0e3e4",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#ebeeef",
+                        "inverse-surface": "#2d3132",
+                        "on-surface": "#181c1d",
+                        "background": "#f7fafb",
+                        "on-primary-fixed-variant": "#00504d",
+                        "secondary-container": "#bce8e5",
+                        "inverse-on-surface": "#eef1f2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#7df6ef",
+                        "on-tertiary-container": "#521b00",
+                        "on-tertiary-fixed-variant": "#78310c",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-secondary-fixed-variant": "#234d4b",
+                        "surface-variant": "#e0e3e4",
+                        "on-surface-variant": "#3d4948",
+                        "on-primary-container": "#003331",
+                        "surface-bright": "#f7fafb",
+                        "on-secondary-fixed": "#00201f",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e5e9ea",
+                        "primary": "#006a66",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#5ed9d3",
+                        "tertiary-container": "#d97b51",
+                        "tertiary": "#974822",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#406a67",
+                        "on-error": "#ffffff",
+                        "surface": "#f7fafb",
+                        "primary-fixed-dim": "#5ed9d3",
+                        "surface-dim": "#d7dadc",
+                        "secondary": "#3c6563",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#bfebe8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#00201f",
+                        "on-background": "#181c1d",
+                        "outline-variant": "#bcc9c8",
+                        "primary-container": "#0ea5a0",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-fixed-dim": "#a3cfcb",
+                        "tertiary-fixed-dim": "#ffb597",
+                        "outline": "#6d7a78"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7fafb; /* Using background color directly for fallback */
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #006a66, #0ea5a0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased overflow-hidden">
+<!-- Fake App Content beneath Drawer -->
+<div class="h-screen w-full flex flex-col pt-20 px-6 opacity-30 pointer-events-none">
+<div class="w-1/2 h-8 bg-surface-container-high rounded-full mb-8"></div>
+<div class="w-full h-32 bg-surface-container-high rounded-xl mb-6"></div>
+<div class="w-full h-24 bg-surface-container-high rounded-xl mb-4"></div>
+<div class="w-full h-24 bg-surface-container-high rounded-xl mb-4"></div>
+</div>
+<!-- Navigation Drawer Overlay -->
+<div class="absolute inset-0 z-50 flex">
+<!-- Scrim -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-[2px]"></div>
+<!-- Drawer Content -->
+<div class="relative w-10/12 max-w-sm h-full bg-surface-bright flex flex-col shadow-[12px_0_24px_rgba(24,28,29,0.06)] rounded-r-3xl overflow-hidden">
+<!-- Header Section -->
+<div class="pt-12 pb-6 px-8 bg-surface-container-lowest">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-surface-container-lowest shadow-[0_4px_12px_rgba(24,28,29,0.08)]">
+<img alt="Profile Picture" class="w-full h-full object-cover" data-alt="close up portrait of a young man with short dark hair smiling gently in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuoanFWS9rjqmYCjw_TV7j4_TVdUngmpe6fypDp5sH2Lq5RWF2Oi6cWIU1qGQB0IrllCiWTOcNar-sodephDpFmUok0ySZHf91_a4Qk3aOBJI8CkxIpale7nhH7u3Lu6gVH31bW7AUTHxnEChXlQ9nurKro7C-DKheBcc9JVVuDyw34KFhFGIxVzBO7o_zg5I807lDwRlYCpQGj3HiaAlpWQuUVnTjFTzHwbC03baY-W7WkWTQxVrYey2Vz6NgIJjHFNF37AglJwm"/>
+</div>
+<div>
+<h2 class="text-headline-md font-bold text-on-surface leading-tight tracking-[-0.02em]">Alex Rivers</h2>
+<span class="text-label-sm font-semibold tracking-widest text-primary uppercase mt-1 inline-block">Premium Member</span>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 overflow-y-auto px-4 py-6 flex flex-col gap-2">
+<!-- Active Item -->
+<a class="flex items-center gap-4 px-4 py-4 rounded-full bg-secondary-container transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-secondary-container text-2xl" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-body-md font-bold text-on-secondary-container">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="medication">medication</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Medications</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="calendar_month">calendar_month</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Calendar</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="monitoring">monitoring</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Health Insights</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group relative" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="chat">chat</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Messages</span>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded-full">3</span>
+</a>
+<!-- Spacing block instead of divider line -->
+<div class="h-6"></div>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="settings">settings</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-4 rounded-full hover:bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-hover:text-primary transition-colors" data-icon="help">help</span>
+<span class="text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Support</span>
+</a>
+</div>
+<!-- Bottom Action -->
+<div class="p-6 bg-surface-container-lowest mt-auto">
+<button class="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-variant transition-colors font-bold text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+                    Sign Out
+                </button>
+</div>
+</div>
+</div>
+</body></html>

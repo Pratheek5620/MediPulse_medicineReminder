@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Medication - The Clinical Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "primary-container": "#0ea5a0",
+              "outline-variant": "#bcc9c8",
+              "on-primary-fixed": "#00201f",
+              "tertiary-fixed": "#ffdbcd",
+              "inverse-on-surface": "#eef1f2",
+              "on-secondary-fixed-variant": "#234d4b",
+              "primary": "#006a66",
+              "surface": "#f7fafb",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e5e9ea",
+              "on-tertiary-fixed-variant": "#78310c",
+              "surface-container-highest": "#e0e3e4",
+              "on-primary-fixed-variant": "#00504d",
+              "surface-container": "#ebeeef",
+              "inverse-primary": "#5ed9d3",
+              "outline": "#6d7a78",
+              "on-tertiary-fixed": "#360f00",
+              "surface-bright": "#f7fafb",
+              "secondary-container": "#bce8e5",
+              "on-background": "#181c1d",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#d97b51",
+              "surface-dim": "#d7dadc",
+              "on-secondary-fixed": "#00201f",
+              "on-tertiary-container": "#521b00",
+              "inverse-surface": "#2d3132",
+              "surface-variant": "#e0e3e4",
+              "primary-fixed": "#7df6ef",
+              "tertiary": "#974822",
+              "primary-fixed-dim": "#5ed9d3",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#406a67",
+              "surface-container-low": "#f1f4f5",
+              "secondary-fixed": "#bfebe8",
+              "secondary-fixed-dim": "#a3cfcb",
+              "on-surface-variant": "#3d4948",
+              "on-secondary": "#ffffff",
+              "secondary": "#3c6563",
+              "on-surface": "#181c1d",
+              "background": "#f7fafb",
+              "on-primary-container": "#003331",
+              "surface-tint": "#006a66",
+              "tertiary-fixed-dim": "#ffb597",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.75rem", "xl": "2.5rem", "full": "9999px"},
+            boxShadow: {
+              'ambient': '0px 12px 24px rgba(24, 28, 29, 0.06)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background-color: rgba(247, 250, 251, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col items-center justify-center bg-surface-container-low p-4 sm:p-8">
+<!-- Mobile App Container -->
+<main class="w-full max-w-[428px] bg-surface min-h-[850px] relative overflow-hidden flex flex-col rounded-[2.5rem] shadow-ambient">
+<!-- Header (Back-to-Main Exception) -->
+<header class="flex items-center justify-between px-6 pt-12 pb-6 bg-surface z-10 sticky top-0">
+<button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-[1.125rem] font-bold tracking-tight text-on-surface flex-1 text-center pr-12">Add Medication</h1>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-6 pb-32 space-y-8 no-scrollbar">
+<!-- Hero Image / Visual Break -->
+<div class="w-full h-48 rounded-2xl bg-gradient-to-br from-primary to-primary-container relative overflow-hidden flex items-center justify-center -mt-2 shadow-ambient">
+<!-- Abstract Pill Graphic -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-white text-7xl opacity-90" data-icon="medication" data-weight="fill" style="font-variation-settings: 'FILL' 1;">medication</span>
+</div>
+<!-- Form Section -->
+<form class="space-y-6">
+<!-- Medication Name -->
+<div class="space-y-2">
+<label class="block text-[0.875rem] font-semibold text-on-surface px-1" for="medName">Medication Name</label>
+<div class="relative">
+<input class="w-full h-14 bg-surface-container-high border-none rounded-xl px-4 text-on-surface placeholder:text-outline focus:ring-0 focus:bg-surface-container-lowest transition-colors font-medium" id="medName" placeholder="e.g. Lisinopril" type="text"/>
+</div>
+</div>
+<!-- Dosage Form -->
+<div class="space-y-2">
+<label class="block text-[0.875rem] font-semibold text-on-surface px-1" for="dosageForm">Dosage Form</label>
+<div class="relative">
+<select class="w-full h-14 bg-surface-container-high border-none rounded-xl px-4 text-on-surface focus:ring-0 focus:bg-surface-container-lowest transition-colors font-medium appearance-none" id="dosageForm">
+<option class="text-outline" disabled="" selected="" value="">Select form</option>
+<option value="tablet">Tablet</option>
+<option value="capsule">Capsule</option>
+<option value="liquid">Liquid</option>
+<option value="injection">Injection</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Strength -->
+<div class="space-y-2">
+<label class="block text-[0.875rem] font-semibold text-on-surface px-1" for="strength">Strength</label>
+<div class="relative">
+<input class="w-full h-14 bg-surface-container-high border-none rounded-xl px-4 text-on-surface placeholder:text-outline focus:ring-0 focus:bg-surface-container-lowest transition-colors font-medium" id="strength" placeholder="e.g. 10 mg" type="text"/>
+</div>
+</div>
+<!-- Frequency (Additional Field for realism) -->
+<div class="space-y-2 pb-4">
+<label class="block text-[0.875rem] font-semibold text-on-surface px-1">Frequency</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="relative flex items-center justify-center h-14 bg-surface-container-lowest rounded-xl cursor-pointer">
+<input class="peer sr-only" name="freq" type="radio"/>
+<div class="absolute inset-0 rounded-xl bg-surface-container-high peer-checked:bg-primary-container opacity-20 transition-colors"></div>
+<span class="relative text-[0.875rem] font-bold text-on-surface peer-checked:text-primary">Daily</span>
+</label>
+<label class="relative flex items-center justify-center h-14 bg-surface-container-lowest rounded-xl cursor-pointer">
+<input class="peer sr-only" name="freq" type="radio"/>
+<div class="absolute inset-0 rounded-xl bg-surface-container-high peer-checked:bg-primary-container opacity-20 transition-colors"></div>
+<span class="relative text-[0.875rem] font-bold text-on-surface peer-checked:text-primary">As Needed</span>
+</label>
+</div>
+</div>
+</form>
+</div>
+<!-- Fixed Bottom Action Area -->
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-panel border-t border-outline-variant/15 rounded-b-[2.5rem]">
+<button class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-white font-bold text-[1rem] rounded-full shadow-ambient hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="check_circle">check_circle</span>
+                Save Medication
+            </button>
+</div>
+</main>
+</body></html>

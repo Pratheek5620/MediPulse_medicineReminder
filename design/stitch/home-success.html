@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediPulse - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#5ed9d3",
+                        "surface-bright": "#f7fafb",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#521b00",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-container-high": "#e5e9ea",
+                        "on-secondary-container": "#406a67",
+                        "surface-container-low": "#f1f4f5",
+                        "primary-fixed": "#7df6ef",
+                        "on-primary-fixed-variant": "#00504d",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#0ea5a0",
+                        "surface-container": "#ebeeef",
+                        "surface-variant": "#e0e3e4",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#974822",
+                        "inverse-on-surface": "#eef1f2",
+                        "on-background": "#181c1d",
+                        "secondary-container": "#bce8e5",
+                        "secondary-fixed-dim": "#a3cfcb",
+                        "secondary-fixed": "#bfebe8",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#003331",
+                        "on-tertiary-fixed-variant": "#78310c",
+                        "on-error-container": "#93000a",
+                        "background": "#f7fafb",
+                        "primary": "#006a66",
+                        "surface": "#f7fafb",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#181c1d",
+                        "on-surface-variant": "#3d4948",
+                        "tertiary-fixed-dim": "#ffb597",
+                        "outline": "#6d7a78",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary-container": "#d97b51",
+                        "surface-tint": "#006a66",
+                        "inverse-surface": "#2d3132",
+                        "surface-dim": "#d7dadc",
+                        "on-secondary-fixed": "#00201f",
+                        "outline-variant": "#bcc9c8",
+                        "surface-container-highest": "#e0e3e4",
+                        "on-primary-fixed": "#00201f",
+                        "on-secondary-fixed-variant": "#234d4b",
+                        "secondary": "#3c6563",
+                        "inverse-primary": "#5ed9d3"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7fafb;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #006a66 0%, #0ea5a0 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">menu</span>
+<h1 class="text-headline-md font-bold tracking-tight text-primary">MediPulse</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl cursor-pointer">account_circle</span>
+</div>
+</header>
+<main class="px-6 space-y-8 mt-4">
+<!-- Hero Section: All Doses Taken -->
+<section class="relative overflow-hidden rounded-lg signature-gradient p-8 text-on-primary shadow-xl">
+<!-- Decorative Asymmetry -->
+<div class="absolute -right-8 -top-8 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-4">
+<div class="inline-flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
+<span class="text-label-sm font-bold tracking-widest">STREAK ACTIVE</span>
+<span class="text-sm">🔥 5 day streak</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="bg-white rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="text-headline-lg font-bold leading-tight">All done for today!</h2>
+</div>
+<p class="text-body-md opacity-90 max-w-[240px]">You've completed your entire medication schedule. Great job keeping your health on track!</p>
+</div>
+<div class="pt-4">
+<button class="bg-white text-primary px-6 py-2 rounded-full font-bold text-label-md hover:bg-surface-container-lowest transition-colors">
+                        View Summary
+                    </button>
+</div>
+</div>
+<!-- Overlapping Element Principle -->
+<div class="absolute bottom-[-20px] right-[-10px] w-32 h-32 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[120px]">medication</span>
+</div>
+</section>
+<!-- Bento Grid: Health Insights -->
+<section class="space-y-4">
+<h3 class="text-title-md font-bold px-1">Health Insights</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Stock Pulse Card -->
+<div class="col-span-2 bg-surface-container-low p-6 rounded-lg space-y-4">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<span class="text-label-sm text-on-surface-variant tracking-wider">STOCK PULSE</span>
+<p class="text-title-md font-bold">Lisinopril 10mg</p>
+</div>
+<span class="text-primary font-bold">12 days left</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full signature-gradient rounded-full w-[40%] relative">
+<div class="absolute right-0 top-0 bottom-0 w-2 bg-white/40 blur-[2px]"></div>
+</div>
+</div>
+</div>
+<!-- Adherence Card -->
+<div class="bg-surface-container-high p-5 rounded-lg flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+<div>
+<p class="text-headline-md font-bold">98%</p>
+<p class="text-label-sm text-on-surface-variant">ADHERENCE RATE</p>
+</div>
+</div>
+<!-- Next Scheduled Card -->
+<div class="bg-white p-5 rounded-lg flex flex-col justify-between aspect-square shadow-sm">
+<div class="bg-surface-container-low w-10 h-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">event_repeat</span>
+</div>
+<div>
+<p class="text-title-md font-bold text-on-surface">Tomorrow</p>
+<p class="text-label-sm text-on-surface-variant">08:00 AM START</p>
+</div>
+</div>
+</div>
+</section>
+<!-- History Preview (No Divider Mandate) -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-1">
+<h3 class="text-title-md font-bold">Today's History</h3>
+<span class="text-primary text-sm font-bold cursor-pointer">See All</span>
+</div>
+<div class="space-y-3">
+<!-- Entry 1 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">pill</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Multivitamin</p>
+<p class="text-label-sm text-on-surface-variant">Taken at 08:30 AM</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Entry 2 (Zebra shift) -->
+<div class="flex items-center gap-4 p-4 bg-white rounded-lg border border-transparent shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Omega-3 Fish Oil</p>
+<p class="text-label-sm text-on-surface-variant">Taken at 08:32 AM</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Entry 3 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">healing</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Lisinopril</p>
+<p class="text-label-sm text-on-surface-variant">Taken at 08:00 PM</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="w-14 h-14 signature-gradient text-on-primary rounded-lg flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-outline-variant/10 px-6 py-3 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<div class="bg-secondary-container text-on-secondary-container px-5 py-1 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="text-label-sm font-bold text-on-surface">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">medication</span>
+<span class="text-label-sm font-medium text-on-surface-variant">Medications</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<span class="text-label-sm font-medium text-on-surface-variant">History</span>
+</div>
+</nav>
+</body></html>

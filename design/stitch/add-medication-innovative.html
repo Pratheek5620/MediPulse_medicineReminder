@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediPulse - Add Medication</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0EA5A0",
+                        "primary-container": "#D1F2F1",
+                        "on-primary": "#FFFFFF",
+                        "surface": "#F8FAFB",
+                        "on-surface": "#1A1C1C",
+                        "surface-container": "#FFFFFF",
+                        "surface-container-high": "#F0F4F4",
+                        "outline": "#707978",
+                        "outline-variant": "#BFC9C8",
+                        "error": "#BA1A1A",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+        }
+    </style>
+</head>
+<body class="bg-black/20 text-on-surface min-h-screen flex items-end sm:items-center justify-center">
+<!-- Modal Container -->
+<div class="bg-surface w-full max-w-lg rounded-t-xl sm:rounded-xl overflow-hidden shadow-2xl transition-all animate-in slide-in-from-bottom duration-500">
+<!-- Header -->
+<div class="px-6 pt-8 pb-4 flex flex-col items-center gap-2">
+<div class="w-12 h-1.5 bg-outline-variant/30 rounded-full mb-4 sm:hidden"></div>
+<h1 class="text-2xl font-bold tracking-tight text-center">Add Medication</h1>
+<p class="text-sm text-outline">Set up your medication schedule</p>
+</div>
+<form class="p-6 pt-2 space-y-8 overflow-y-auto max-h-[85vh] no-scrollbar">
+<!-- Section 1: Basic Info -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Medication Info
+                </div>
+<div class="space-y-4">
+<div class="group">
+<label class="block text-sm font-semibold mb-1.5 ml-1">Name</label>
+<input class="w-full h-14 px-5 bg-surface-container-high border-0 rounded-2xl focus:ring-2 focus:ring-primary transition-all placeholder:text-outline/50" placeholder="e.g. Amoxicillin" type="text"/>
+</div>
+<div class="group">
+<label class="block text-sm font-semibold mb-1.5 ml-1">Dosage</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 pl-5 pr-24 bg-surface-container-high border-0 rounded-2xl focus:ring-2 focus:ring-primary transition-all text-lg font-bold" placeholder="500" type="number"/>
+<div class="absolute right-2 flex bg-white/80 p-1 rounded-xl shadow-sm border border-outline-variant/20">
+<button class="px-3 py-1.5 text-xs font-bold rounded-lg bg-primary text-white" type="button">mg</button>
+<button class="px-3 py-1.5 text-xs font-bold rounded-lg text-outline hover:bg-surface-container-high transition-colors" type="button">ml</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Schedule (Innovative Picker) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        Schedule
+                    </div>
+<button class="flex items-center gap-1 text-xs font-bold text-primary bg-primary-container px-3 py-1.5 rounded-full hover:brightness-95 transition-all" type="button">
+<span class="material-symbols-outlined text-sm">add</span> Add Time
+                    </button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="relative bg-surface-container-high p-4 rounded-2xl border border-transparent hover:border-primary/30 transition-all flex flex-col gap-1 cursor-pointer">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Morning</span>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold">08:00</span>
+<span class="material-symbols-outlined text-primary text-xl">wb_sunny</span>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="time" value="08:00"/>
+</div>
+<div class="relative bg-surface-container-high p-4 rounded-2xl border border-transparent hover:border-primary/30 transition-all flex flex-col gap-1 cursor-pointer">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Night</span>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold">20:00</span>
+<span class="material-symbols-outlined text-primary text-xl">dark_mode</span>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="time" value="20:00"/>
+</div>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container-high rounded-2xl">
+<button class="flex-1 py-2 text-xs font-bold bg-white shadow-sm rounded-xl text-primary" type="button">Daily</button>
+<button class="flex-1 py-2 text-xs font-bold text-outline hover:text-primary transition-colors" type="button">Weekly</button>
+<button class="flex-1 py-2 text-xs font-bold text-outline hover:text-primary transition-colors" type="button">As Needed</button>
+</div>
+</section>
+<!-- Section 3: Inventory (Visual Progress) -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Stock Inventory
+                </div>
+<div class="bg-white border border-outline-variant/20 p-5 rounded-2xl shadow-sm space-y-5">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<span class="text-xs text-outline font-medium">Current Stock</span>
+<div class="flex items-baseline gap-1">
+<input class="w-16 p-0 text-2xl font-bold border-0 bg-transparent focus:ring-0" type="number" value="30"/>
+<span class="text-sm font-semibold text-outline">tablets</span>
+</div>
+</div>
+<div class="text-right space-y-1">
+<span class="text-xs text-outline font-medium">Refill at</span>
+<div class="flex items-baseline justify-end gap-1">
+<input class="w-12 p-0 text-xl font-bold border-0 bg-transparent text-right focus:ring-0 text-error" type="number" value="10"/>
+</div>
+</div>
+</div>
+<!-- Visual Stock Indicator -->
+<div class="relative h-6 w-full bg-surface-container-high rounded-full overflow-hidden">
+<!-- Progress Bar -->
+<div class="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full" style="width: 100%"></div>
+<!-- Threshold Line -->
+<div class="absolute top-0 bottom-0 w-0.5 bg-error/50 z-10" style="left: 33.3%">
+<div class="absolute -top-1 -left-1 w-2.5 h-2.5 bg-error rounded-full shadow-sm"></div>
+</div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-outline uppercase tracking-tight">
+<span>Low Stock Alert</span>
+<span>Full Capacity</span>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-3 pt-4">
+<button class="order-2 sm:order-1 flex-1 h-14 rounded-2xl font-bold text-outline hover:bg-surface-container-high transition-all" type="button">
+                    Cancel
+                </button>
+<button class="order-1 sm:order-2 flex-[2] h-14 rounded-2xl bg-primary text-white font-bold shadow-lg shadow-primary/20 hover:brightness-105 active:scale-[0.98] transition-all" type="submit">
+                    Save Medication
+                </button>
+</div>
+</form>
+</div>
+</body></html>

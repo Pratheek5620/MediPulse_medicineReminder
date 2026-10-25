@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediPulse - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-container": "#406a67", "error-container": "#ffdad6", "tertiary-container": "#d97b51", "on-primary-fixed": "#00201f", "surface-tint": "#006a66", error: "#ba1a1a", background: "#f7fafb", "primary-fixed-dim": "#5ed9d3", "on-surface": "#181c1d", "on-secondary": "#ffffff", "inverse-on-surface": "#eef1f2", primary: "#006a66", "surface-dim": "#d7dadc", "on-background": "#181c1d", "surface-container-high": "#e5e9ea", "surface-container-low": "#f1f4f5", outline: "#6d7a78", "on-surface-variant": "#3d4948", "inverse-primary": "#5ed9d3", tertiary: "#974822", "on-primary-fixed-variant": "#00504d", "surface-container-highest": "#e0e3e4", "primary-fixed": "#7df6ef", "on-tertiary-fixed": "#360f00", "primary-container": "#0ea5a0", "secondary-container": "#bce8e5", secondary: "#3c6563", "inverse-surface": "#2d3132", "surface-bright": "#f7fafb", surface: "#f7fafb", "on-primary-container": "#003331", "on-error": "#ffffff", "on-tertiary-container": "#521b00", "surface-variant": "#e0e3e4", "on-secondary-fixed": "#00201f", "on-tertiary": "#ffffff", "tertiary-fixed": "#ffdbcd", "surface-container-lowest": "#ffffff", "surface-container": "#ebeeef", "secondary-fixed-dim": "#a3cfcb", "on-error-container": "#93000a", "on-primary": "#ffffff", "outline-variant": "#bcc9c8", "tertiary-fixed-dim": "#ffb597", "on-tertiary-fixed-variant": "#78310c", "secondary-fixed": "#bfebe8", "on-secondary-fixed-variant": "#234d4b"}, fontFamily: {headline: ["Plus Jakarta Sans"], body: ["Plus Jakarta Sans"], label: ["Plus Jakarta Sans"], display: "Plus Jakarta Sans"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}}}};</script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(27,28,26,0.06)]">
+<div class="flex items-center px-6 h-20 w-full max-w-screen-xl mx-auto">
+<button class="text-[#994439] dark:text-[#f38b7c] hover:bg-[#f5f3ef] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200 ease-out p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="ml-4 font-['Plus_Jakarta_Sans'] text-2xl font-bold tracking-tight text-[#994439] dark:text-[#f38b7c]">Settings</h1>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Profile Section -->
+<section class="mt-8">
+<div class="bg-surface-container-lowest rounded-xl p-8 flex items-center justify-between shadow-[0_40px_40px_-15px_rgba(27,28,26,0.04)]">
+<div class="flex items-center gap-6">
+<div class="relative">
+<img alt="User Profile" class="w-20 h-20 rounded-full object-cover ring-4 ring-primary-container/20" data-alt="portrait of a young woman with a gentle expression and warm lighting, soft editorial photography style with cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaM8D07J8OGJ7V2FdDZ-EF31ZV5xU_4VtdYmAK50gg3WZB_c1l4qwEs2k3YTUf9krmMyxiKFtOFrCfcCO33n4oWC-F6b8VdmKgTW733uAUhAZ4tLp7U3RcSpY6F9ZLMpIYXA8R57VaY4ChU-FQQbhQ3WhM8aFznkP8mYNrz_bUkROG02IyhjajNUG5gKFWzC7H5qVMgrg7lbkI7jXDfBIOysmqeE-i9AB4bopdnfJij1Gyjfh1cl03Bmhv2XMFij7Sf_5QXRbAJT5s"/>
+<div class="absolute bottom-0 right-0 bg-primary p-1.5 rounded-full border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-white text-[16px]" data-icon="edit">edit</span>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Sarah J.</h2>
+<p class="text-on-surface-variant body-md">Premium Member • Since 2022</p>
+</div>
+</div>
+<button class="bg-surface-container-high text-on-surface px-6 py-3 rounded-full font-medium hover:opacity-80 transition-opacity active:scale-95 duration-200">
+                    Edit Profile
+                </button>
+</div>
+</section>
+<!-- Notification Settings -->
+<section class="space-y-4">
+<h3 class="text-on-surface-variant font-bold text-sm tracking-widest px-2">NOTIFICATIONS</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- Dose Reminders -->
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Dose Reminders</p>
+<p class="text-sm text-on-surface-variant">Alerts for scheduled medications</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Refill Alerts -->
+<div class="flex items-center justify-between p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="pill">pill</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Refill Alerts</p>
+<p class="text-sm text-on-surface-variant">Notify when medicine is running low</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Health Insights -->
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Health Insights</p>
+<p class="text-sm text-on-surface-variant">Weekly summaries and wellness tips</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- App Settings -->
+<section class="space-y-4">
+<h3 class="text-on-surface-variant font-bold text-sm tracking-widest px-2">APP PREFERENCES</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- Dark Mode -->
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</div>
+<p class="font-semibold text-on-surface">Dark Mode</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Language -->
+<button class="w-full flex items-center justify-between p-6 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<p class="font-semibold text-on-surface">Language</p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span>English</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</button>
+<!-- Units -->
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+</div>
+<p class="font-semibold text-on-surface">Units</p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span>mg/ml</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Security & Privacy -->
+<section class="space-y-4">
+<h3 class="text-on-surface-variant font-bold text-sm tracking-widest px-2">SECURITY &amp; PRIVACY</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<p class="font-semibold text-on-surface">Change Password</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<div class="flex items-center justify-between p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+</div>
+<p class="font-semibold text-on-surface">Face ID / Touch ID</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-high rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</div>
+<p class="font-semibold text-on-surface">Export Health Data</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Support & Legal -->
+<section class="space-y-4">
+<h3 class="text-on-surface-variant font-bold text-sm tracking-widest px-2">SUPPORT</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</div>
+<p class="font-semibold text-on-surface">Help Center</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-6 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+</div>
+<p class="font-semibold text-on-surface">Privacy Policy</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<p class="font-semibold text-on-surface">Terms of Service</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Logout -->
+<section class="pb-12">
+<button class="w-full py-5 bg-error-container text-error rounded-xl font-bold text-lg hover:opacity-80 transition-opacity active:scale-95 duration-200">
+                Log out
+            </button>
+<p class="mt-6 text-center text-on-surface-variant body-sm">
+                MediPulse Version 2.4.1 (Build 1204)
+            </p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-[#fbf9f5]/80 dark:bg-stone-950/80 backdrop-blur-xl rounded-t-[3rem] z-50 shadow-[0_-10px_40px_rgba(27,28,26,0.06)]">
+<button class="flex flex-col items-center justify-center text-[#554240] dark:text-stone-400 px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#554240] dark:text-stone-400 px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="pill">pill</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide">Meds</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#554240] dark:text-stone-400 px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide">Insights</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#994439] to-[#f38b7c] text-white rounded-full px-5 py-2 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide">Settings</span>
+</button>
+</nav>
+</body></html>

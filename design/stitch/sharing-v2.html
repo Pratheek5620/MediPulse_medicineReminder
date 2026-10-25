@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharing</title>
+  <!-- Plus Jakarta Sans Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Material Symbols Outlined -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aura: {
+              primary: '#006A66',
+              primaryHover: '#005451',
+              primaryLight: '#E6F4F3',
+              primarySurface: '#F0F9F8',
+              surface: '#F8FBFC',
+              surfaceCard: '#FFFFFF',
+              dark: '#111918',
+              muted: '#4A5553',
+              emergencyBg: '#FDF2F2',
+              emergencyBorder: '#F8B4B4',
+              emergencyText: '#991B1B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderRadius: {
+            '24': '24px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Toggle Switch styling for elderly accessibility */
+    .switch-checkbox:checked + .switch-label {
+      background-color: #006A66;
+    }
+    .switch-checkbox:checked + .switch-label .switch-dot {
+      transform: translateX(24px);
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #F8FBFC;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FBFC] text-aura-dark flex justify-center items-start min-h-screen">
+
+  <!-- Mobile Container (390 x 844 target viewport) -->
+  <div class="w-full max-w-[390px] min-h-[844px] bg-[#F8FBFC] relative flex flex-col pb-28 select-none shadow-xl">
+
+    <!-- Top App Bar -->
+    <header class="px-5 pt-8 pb-4 bg-[#F8FBFC] sticky top-0 z-20">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs uppercase tracking-wider font-bold text-aura-primary">Care Circle</span>
+          <h1 class="text-3xl font-extrabold text-aura-dark tracking-tight">Sharing</h1>
+        </div>
+        <div class="w-12 h-12 rounded-full bg-aura-primaryLight text-aura-primary flex items-center justify-center font-bold text-lg">
+          <span class="material-symbols-outlined text-[26px]">share</span>
+        </div>
+      </div>
+      <p class="text-base text-aura-muted mt-1 leading-snug">
+        Keep your doctors and family updated on your routine safely.
+      </p>
+    </header>
+
+    <!-- Main Content Stream -->
+    <main class="px-4 space-y-5 flex-1 mt-1">
+
+      <!-- Doctor Sharing Card (Radius 24px, No 1px divider, High Contrast) -->
+      <section class="bg-white rounded-24 p-5 shadow-sm space-y-4">
+        <!-- Doctor Info Header -->
+        <div class="flex items-center gap-3.5">
+          <div class="w-14 h-14 rounded-full bg-aura-primary text-white flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-sm">
+            Dr
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-xl font-bold text-aura-dark leading-tight">Dr. Rajesh Sharma</h2>
+            <p class="text-base font-medium text-aura-muted leading-tight mt-0.5">Apollo Heart Clinic · your prescribing doctor</p>
+          </div>
+        </div>
+
+        <!-- Tonal Pill Status Indicator -->
+        <div class="inline-flex items-center gap-2 bg-aura-primaryLight text-aura-primary px-3.5 py-1.5 rounded-full text-sm font-semibold">
+          <span class="w-2.5 h-2.5 rounded-full bg-aura-primary"></span>
+          Connected & Syncing Daily
+        </div>
+
+        <!-- Row 1: Doses Switch -->
+        <div class="bg-[#F4F9F8] rounded-2xl p-4 flex items-center justify-between gap-3">
+          <div class="flex-1">
+            <p class="text-lg font-bold text-aura-dark leading-snug">Doses taken and missed</p>
+            <p class="text-base text-aura-muted leading-normal mt-0.5">Your doctor sees your daily record</p>
+          </div>
+          <!-- Accessible Toggle -->
+          <label class="relative inline-block w-14 h-8 flex-shrink-0 cursor-pointer">
+            <input type="checkbox" checked class="sr-only switch-checkbox" aria-label="Share doses taken and missed">
+            <span class="switch-label block w-14 h-8 bg-gray-300 rounded-full transition-colors duration-200 ease-in-out p-1">
+              <span class="switch-dot block w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-200 ease-in-out"></span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Row 2: Side Effects Switch -->
+        <div class="bg-[#F4F9F8] rounded-2xl p-4 flex items-center justify-between gap-3">
+          <div class="flex-1">
+            <p class="text-lg font-bold text-aura-dark leading-snug">Side effect notes</p>
+            <p class="text-base text-aura-muted leading-normal mt-0.5">Anything you report after a dose</p>
+          </div>
+          <!-- Accessible Toggle -->
+          <label class="relative inline-block w-14 h-8 flex-shrink-0 cursor-pointer">
+            <input type="checkbox" checked class="sr-only switch-checkbox" aria-label="Share side effect notes">
+            <span class="switch-label block w-14 h-8 bg-gray-300 rounded-full transition-colors duration-200 ease-in-out p-1">
+              <span class="switch-dot block w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-200 ease-in-out"></span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Single Primary Action: Teal Pill Button >=56dp -->
+        <button type="button" class="w-full h-14 bg-aura-primary hover:bg-aura-primaryHover active:scale-[0.99] transition-all rounded-full text-white font-bold text-lg flex items-center justify-center gap-2.5 shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">chat</span>
+          <span>Message my doctor</span>
+        </button>
+      </section>
+
+      <!-- Family Guardian Card -->
+      <section class="bg-white rounded-24 p-5 shadow-sm space-y-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl flex-shrink-0">
+            <span class="material-symbols-outlined text-3xl">people</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-xl font-bold text-aura-dark leading-tight">Amit Sharma · Son</h2>
+            <p class="text-base text-aura-muted font-medium leading-snug mt-0.5">Alerted if a dose is missed for 30 min</p>
+          </div>
+        </div>
+
+        <!-- Notification Status Badge -->
+        <div class="bg-[#F8FAF9] rounded-2xl p-3.5 flex items-center gap-3 text-aura-muted">
+          <span class="material-symbols-outlined text-aura-primary text-2xl flex-shrink-0">notifications_active</span>
+          <span class="text-base font-medium">Automatic SMS & WhatsApp alert enabled</span>
+        </div>
+
+        <!-- Outlined Pill Button for Family Member >= 56dp -->
+        <button type="button" class="w-full h-14 border-2 border-aura-primary text-aura-primary hover:bg-aura-primaryLight active:scale-[0.99] transition-all rounded-full font-bold text-lg flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[24px]">person_add</span>
+          <span>Add a family member</span>
+        </button>
+      </section>
+
+      <!-- 30-Day PDF Report Action Button -->
+      <section class="pt-1">
+        <button type="button" class="w-full h-14 border-2 border-aura-primary text-aura-primary hover:bg-aura-primaryLight active:scale-[0.99] transition-all rounded-full font-bold text-lg flex items-center justify-center gap-2.5 bg-white shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">download</span>
+          <span>Send a 30-day report (PDF)</span>
+        </button>
+      </section>
+
+      <!-- Soft Red Emergency Safety Banner -->
+      <section class="bg-aura-emergencyBg border border-aura-emergencyBorder rounded-24 p-4.5 flex items-start gap-3.5">
+        <div class="w-11 h-11 rounded-full bg-red-100 text-aura-emergencyText flex items-center justify-center flex-shrink-0 mt-0.5">
+          <span class="material-symbols-outlined text-[26px]">call</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-base font-bold text-aura-emergencyText leading-snug">
+            Chest pain, trouble breathing or fainting?
+          </p>
+          <p class="text-base font-semibold text-red-800 leading-snug mt-1">
+            Call <a href="tel:112" class="underline font-extrabold text-red-900 text-lg">112</a> now. Don't wait for a message reply.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar (4 tabs: Today, History, Medicines, Share) -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-3 py-2 z-30 flex items-center justify-around border-t-0 rounded-t-[28px]">
+      
+      <!-- Tab 1: Today -->
+      <button class="flex flex-col items-center justify-center py-1 px-3 text-aura-muted hover:text-aura-dark transition-colors">
+        <span class="material-symbols-outlined text-[28px]">today</span>
+        <span class="text-xs font-semibold mt-0.5">Today</span>
+      </button>
+
+      <!-- Tab 2: History -->
+      <button class="flex flex-col items-center justify-center py-1 px-3 text-aura-muted hover:text-aura-dark transition-colors">
+        <span class="material-symbols-outlined text-[28px]">history</span>
+        <span class="text-xs font-semibold mt-0.5">History</span>
+      </button>
+
+      <!-- Tab 3: Medicines -->
+      <button class="flex flex-col items-center justify-center py-1 px-3 text-aura-muted hover:text-aura-dark transition-colors">
+        <span class="material-symbols-outlined text-[28px]">medication</span>
+        <span class="text-xs font-semibold mt-0.5">Medicines</span>
+      </button>
+
+      <!-- Tab 4: Share (ACTIVE) -->
+      <button class="flex flex-col items-center justify-center py-1 px-4 text-aura-primary font-bold relative">
+        <div class="w-12 h-8 rounded-full bg-aura-primaryLight flex items-center justify-center text-aura-primary">
+          <span class="material-symbols-outlined text-[24px]">share</span>
+        </div>
+        <span class="text-xs font-extrabold mt-0.5 text-aura-primary">Share</span>
+      </button>
+
+    </nav>
+
+  </div>
+
+</body>
+</html>

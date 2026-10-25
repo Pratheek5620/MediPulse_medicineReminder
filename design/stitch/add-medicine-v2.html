@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aura: {
+              primary: '#006A66',
+              primaryHover: '#005451',
+              primaryContainer: '#D5F1EF',
+              surface: '#F6FAF9',
+              card: '#FFFFFF',
+              textMain: '#121F1E',
+              textMuted: '#4F6160',
+              borderLight: '#D2DFDE',
+              accentLight: '#E8F5F4'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #ECEEEF;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars but keep scrollable */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center min-h-screen p-0 sm:p-4">
+
+  <!-- Mobile Device Frame (390 x 844) -->
+  <div class="w-[390px] h-[844px] bg-[#F6FAF9] text-[#121F1E] flex flex-col relative overflow-hidden shadow-2xl rounded-[40px] border border-gray-200">
+    
+    <!-- Top System App Bar (Screen Header) -->
+    <header class="pt-10 pb-4 px-5 bg-white shrink-0 flex items-center gap-3 shadow-[0_2px_12px_rgba(0,106,102,0.04)] z-20">
+      <button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full active:bg-[#E8F5F4] text-[#006A66] transition-colors focus:outline-none">
+        <span class="material-symbols-outlined text-[28px] font-bold">arrow_back</span>
+      </button>
+      <h1 class="text-[22px] font-bold text-[#121F1E] tracking-tight">Add medicine</h1>
+    </header>
+
+    <!-- Scrollable Content Area -->
+    <main class="flex-1 overflow-y-auto px-5 pt-4 pb-28 no-scrollbar space-y-5">
+      
+      <!-- Scan Prescription / Pill Strip Button (Dashed outline, 56dp tall) -->
+      <button type="button" class="w-full h-14 border-2 border-dashed border-[#006A66] bg-[#E8F5F4]/60 hover:bg-[#E8F5F4] rounded-[24px] flex items-center justify-center gap-3 text-[#006A66] font-bold text-[17px] active:scale-[0.99] transition-all focus:outline-none">
+        <span class="material-symbols-outlined text-[26px]">photo_camera</span>
+        <span>Scan prescription or pill strip</span>
+      </button>
+
+      <!-- Medicine Details Card -->
+      <section class="bg-white rounded-[24px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-4">
+        <!-- Medicine Name Field -->
+        <div>
+          <label for="med-name" class="block text-[15px] font-bold text-[#121F1E] mb-2">
+            Medicine name
+          </label>
+          <div class="relative">
+            <input 
+              id="med-name" 
+              type="text" 
+              value="Metformin" 
+              readonly
+              class="w-full h-14 px-4 bg-[#F6FAF9] text-[#121F1E] font-semibold text-[17px] rounded-[16px] border-2 border-[#006A66]/30 focus:border-[#006A66] focus:bg-white focus:outline-none transition-colors"
+            />
+            <span class="material-symbols-outlined filled absolute right-4 top-1/2 -translate-y-1/2 text-[#006A66] text-[22px]">check_circle</span>
+          </div>
+        </div>
+
+        <!-- Strength & Duration Side by Side -->
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <div>
+            <label for="strength" class="block text-[15px] font-bold text-[#121F1E] mb-2">
+              Strength
+            </label>
+            <input 
+              id="strength" 
+              type="text" 
+              value="500 mg" 
+              readonly
+              class="w-full h-14 px-4 bg-[#F6FAF9] text-[#121F1E] font-semibold text-[17px] rounded-[16px] border-2 border-[#D2DFDE] focus:border-[#006A66] focus:bg-white focus:outline-none transition-colors"
+            />
+          </div>
+          <div>
+            <label for="duration" class="block text-[15px] font-bold text-[#121F1E] mb-2">
+              For how many days
+            </label>
+            <input 
+              id="duration" 
+              type="text" 
+              value="30" 
+              readonly
+              class="w-full h-14 px-4 bg-[#F6FAF9] text-[#121F1E] font-semibold text-[17px] rounded-[16px] border-2 border-[#D2DFDE] focus:border-[#006A66] focus:bg-white focus:outline-none transition-colors"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Timing Section (When to take it) -->
+      <section class="bg-white rounded-[24px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-3.5">
+        <div class="flex items-center justify-between">
+          <h2 class="text-[17px] font-bold text-[#121F1E]">When to take it</h2>
+          <span class="text-[14px] font-semibold text-[#006A66] bg-[#E8F5F4] px-3 py-1 rounded-full">
+            Shown as 1-0-1
+          </span>
+        </div>
+
+        <!-- Three Large Toggle Tiles -->
+        <div class="space-y-2.5">
+          <!-- Morning: Selected (Teal filled) -->
+          <div role="checkbox" aria-checked="true" class="w-full min-h-[58px] p-3.5 bg-[#006A66] text-white rounded-[20px] flex items-center justify-between shadow-sm cursor-pointer active:opacity-95 transition-all">
+            <div class="flex items-center gap-3.5">
+              <span class="material-symbols-outlined text-[26px]">wb_sunny</span>
+              <div>
+                <p class="font-bold text-[17px] leading-tight">Morning</p>
+                <p class="text-[14px] text-teal-100 font-medium">8:30 am</p>
+              </div>
+            </div>
+            <div class="w-7 h-7 bg-white text-[#006A66] rounded-full flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined filled text-[20px]">check</span>
+            </div>
+          </div>
+
+          <!-- Afternoon: Unselected -->
+          <div role="checkbox" aria-checked="false" class="w-full min-h-[58px] p-3.5 bg-[#F6FAF9] text-[#121F1E] rounded-[20px] border border-[#D2DFDE] flex items-center justify-between cursor-pointer active:bg-gray-100 transition-all">
+            <div class="flex items-center gap-3.5">
+              <span class="material-symbols-outlined text-[26px] text-[#4F6160]">light_mode</span>
+              <div>
+                <p class="font-bold text-[17px] leading-tight text-[#4F6160]">Afternoon</p>
+                <p class="text-[14px] text-[#718584] font-medium">2:00 pm</p>
+              </div>
+            </div>
+            <div class="w-7 h-7 rounded-full border-2 border-[#D2DFDE] shrink-0"></div>
+          </div>
+
+          <!-- Night: Selected (Teal filled) -->
+          <div role="checkbox" aria-checked="true" class="w-full min-h-[58px] p-3.5 bg-[#006A66] text-white rounded-[20px] flex items-center justify-between shadow-sm cursor-pointer active:opacity-95 transition-all">
+            <div class="flex items-center gap-3.5">
+              <span class="material-symbols-outlined text-[26px]">bedtime</span>
+              <div>
+                <p class="font-bold text-[17px] leading-tight">Night</p>
+                <p class="text-[14px] text-teal-100 font-medium">8:30 pm</p>
+              </div>
+            </div>
+            <div class="w-7 h-7 bg-white text-[#006A66] rounded-full flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined filled text-[20px]">check</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meal Association Section (With food) -->
+      <section class="bg-white rounded-[24px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] space-y-3">
+        <h2 class="text-[17px] font-bold text-[#121F1E]">With food</h2>
+        
+        <div class="grid grid-cols-3 gap-2.5">
+          <!-- Before -->
+          <button type="button" class="h-14 rounded-full bg-[#F6FAF9] border border-[#D2DFDE] text-[#4F6160] font-bold text-[16px] flex items-center justify-center active:bg-gray-100 transition-all">
+            Before
+          </button>
+          
+          <!-- After (Selected, Dark) -->
+          <button type="button" class="h-14 rounded-full bg-[#121F1E] text-white font-bold text-[16px] flex items-center justify-center shadow-sm active:scale-95 transition-all">
+            After
+          </button>
+          
+          <!-- Any time -->
+          <button type="button" class="h-14 rounded-full bg-[#F6FAF9] border border-[#D2DFDE] text-[#4F6160] font-bold text-[16px] flex items-center justify-center active:bg-gray-100 transition-all">
+            Any time
+          </button>
+        </div>
+      </section>
+
+      <!-- Light Teal Info Box -->
+      <div class="bg-[#D5F1EF]/70 border border-[#006A66]/20 rounded-[20px] p-4 flex items-start gap-3.5">
+        <span class="material-symbols-outlined text-[#006A66] text-[26px] shrink-0 mt-0.5">info</span>
+        <p class="text-[15px] font-semibold text-[#004D4A] leading-relaxed">
+          You'll get 2 reminders a day for 30 days. Your doctor sees this schedule too.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Bottom Sticky Save Bar -->
+    <footer class="absolute bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.06)] z-30">
+      <button type="button" class="w-full h-14 bg-[#006A66] hover:bg-[#005451] active:scale-[0.99] text-white font-bold text-[18px] tracking-wide rounded-full flex items-center justify-center gap-2 shadow-lg shadow-[#006A66]/20 transition-all focus:outline-none">
+        <span class="material-symbols-outlined text-[24px]">save</span>
+        <span>Save medicine</span>
+      </button>
+    </footer>
+
+  </div>
+
+</body>
+</html>
