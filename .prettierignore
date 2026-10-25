@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+# Exported from Stitch and the Claude Doc; keep them as exported.
+design/stitch/
+design/DESIGN.md
+design/tokens.json
+docs/tech-spec.md
