@@ -3,6 +3,7 @@
 MediPulse is a medicine reminder app for patients in India, built for older users and their families. It is Phase 1 of DocAssist, a planned doctor–patient care platform that will be licensed to clinics and hospitals. This repo is a monorepo, so the DocAssist doctor web app can be added later and share code.
 
 Read before making changes:
+
 - `docs/tech-spec.md`: stack, architecture, reminder engine, data model, privacy. This is the source of truth.
 - `docs/product-context.md`: who this is for and the product rules.
 - `docs/backlog.md`: what to build next, in order.
@@ -18,9 +19,22 @@ Read before making changes:
 
 - TypeScript (strict) everywhere. pnpm workspaces + Turborepo.
 - `apps/mobile`: Expo (development builds, never Expo Go), Expo Router, NativeWind, Zustand, TanStack Query (Phase 1b), op-sqlite + SQLCipher + Drizzle ORM, Notifee for reminders, i18next.
-- `packages/schedule`: pure TypeScript with no React Native imports. Holds 1-0-1 parsing, dose generation and missed-dose rules. Must have thorough Jest tests.
+- `packages/schedule`: pure TypeScript with no React Native imports. Holds 1-0-1 parsing, dose generation and missed-dose rules. Must have thorough Vitest tests.
 - `packages/shared`: types and zod schemas.
-- `packages/ui-tokens`: the Tailwind preset from `design/tailwind-preset.js`.
+- `packages/ui-tokens`: colours, font family names and radii from Stitch, plus the Tailwind preset built from them.
+
+## Commands
+
+Run from the repo root. CI runs the same checks on every push and PR.
+
+```bash
+pnpm install
+pnpm check          # lint, typecheck and tests in every package
+pnpm format         # Prettier
+pnpm --filter @medipulse/mobile android   # build and run the app on a phone or emulator
+```
+
+In `apps/mobile`, add packages with `npx expo install <package>` so versions match the Expo SDK, and read `apps/mobile/AGENTS.md` for Expo-specific guidance.
 
 ## Rules
 
@@ -28,7 +42,7 @@ Read before making changes:
 - Store schedule times as wall-clock times plus a timezone, never as UTC instants.
 - The app is a reminder and tracking tool. It must never suggest doses, change a prescription or give medical advice.
 - Every user-facing string goes through i18next, with keys in `en`, `hi` and `kn`. That includes notification text. Never hard-code UI text.
-- Use Plus Jakarta Sans, with Noto Sans Devanagari and Noto Sans Kannada as fallbacks. Check layouts in Kannada at the largest font size.
+- In the app, always use `Text` from `apps/mobile/src/components/text.tsx`, never React Native's. It picks Plus Jakarta Sans, Noto Sans Devanagari or Noto Sans Kannada for the current language and weight. Check layouts in Kannada at the largest font size.
 - Touch targets are at least 48 dp, and every icon button has an `accessibilityLabel`.
 - Use only colours, radii and fonts from `packages/ui-tokens`. No raw hex values in components.
 - Don't put medicine names in notification text unless the user has turned that setting on.

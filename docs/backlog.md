@@ -4,17 +4,18 @@ Each task should fit in one to three 1-hour sessions. Work top to bottom, and ti
 
 ## Setup (weeks 1–3)
 
-- [ ] Create the monorepo: pnpm workspaces, Turborepo, TypeScript strict, ESLint and Prettier, and the folders `apps/mobile`, `packages/schedule`, `packages/shared` and `packages/ui-tokens`
-- [ ] `packages/ui-tokens`: export the preset from `design/tailwind-preset.js`
-- [ ] `apps/mobile`: Expo app with Expo Router, NativeWind using the ui-tokens preset, and Plus Jakarta Sans plus the Noto Devanagari and Kannada fonts
-- [ ] i18next with `en`, `hi` and `kn` resource files, and a language picker screen
-- [ ] GitHub Actions running lint, typecheck and tests on every push
+- [x] Create the monorepo: pnpm workspaces, Turborepo, TypeScript strict, ESLint and Prettier, and the folders `apps/mobile`, `packages/schedule`, `packages/shared` and `packages/ui-tokens`
+- [x] `packages/ui-tokens`: colours, fonts, radii and the Tailwind preset
+- [x] `apps/mobile`: Expo app with Expo Router, NativeWind using the ui-tokens preset, and Plus Jakarta Sans plus the Noto Devanagari and Kannada fonts
+- [x] i18next with `en`, `hi` and `kn` resource files, and a language picker
+- [ ] Save the chosen language on the phone (after the local database lands)
+- [x] GitHub Actions running lint, typecheck and tests on every push
 - [ ] An EAS development build installed on a real Android phone
 
 ## Core (weeks 4–11)
 
-- [ ] `packages/schedule`: types for Medication, Schedule (slots, food relation, start and end dates, timezone) and DoseEvent
-- [ ] `packages/schedule`: parse and format 1-0-1 notation, with tests
+- [x] `packages/schedule`: types for Medication, Schedule (slots, food relation, start and end dates, timezone) and DoseEvent
+- [x] `packages/schedule`: parse and format 1-0-1 notation, with tests
 - [ ] `packages/schedule`: generate dose times for a date range, with tests covering start and end dates, timezones and changes to a schedule
 - [ ] Local database: op-sqlite with SQLCipher (key kept in secure store), Drizzle schema for medications, schedules, dose_events and stock, plus migrations
 - [ ] Add medicine screen (see `design/stitch/add-medicine-v2.png` and `add-medication-fixed.png`)

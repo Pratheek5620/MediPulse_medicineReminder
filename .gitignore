@@ -28,3 +28,8 @@ google-services.json
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Metro and TypeScript
+.metro-health-check*
+*.tsbuildinfo
+.kotlin/

@@ -1,0 +1,19 @@
+{
+  "appName": "MediPulse",
+  "today": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "emptyTitle": "No medicines yet",
+    "emptyBody": "Add your first medicine and MediPulse will remind you when it's time to take it.",
+    "addMedicine": "Add medicine"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "safety": {
+    "emergency": "Feeling very unwell? Call your doctor. For chest pain, trouble breathing or fainting, call 112."
+  }
+}
